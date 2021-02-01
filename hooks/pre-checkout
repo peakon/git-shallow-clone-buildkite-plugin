@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+DEPTH="${BUILDKITE_PLUGIN_GIT_SHALLOW_CLONE_DEPTH:-1}"
+
+export BUILDKITE_GIT_CLONE_FLAGS="-v --depth ${DEPTH}"
+export BUILDKITE_GIT_FETCH_FLAGS="-v --prune --depth ${DEPTH}"

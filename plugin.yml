@@ -1,0 +1,9 @@
+name: Git shallow clone
+description: Sets git-clone and git-fetch flags to perform a shallow clone
+author: https://github.com/vgrigoruk
+requirements: ['git']
+configuration:
+  properties:
+    depth:
+      type: number
+  additionalProperties: false
